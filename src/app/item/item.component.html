@@ -1,0 +1,17 @@
+<div class="position-relative">
+
+  <div class="content position-relative">
+    <img class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+info.poster_path" alt="">
+
+    <div class="overlay" [routerLink]="['/details/' ,info.id,info.media_type]">
+      <p>{{info.overview | seemore: 5}}</p>
+    </div>
+  </div>
+
+  <p class="position-absolute top-0 end-0 bg-info p-2">{{info.vote_average | number:'1.0-1'}}</p>
+  <h5 class="my-3">{{info.title | uppercase}} {{info.name | lowercase}}</h5>
+
+</div>
+<!-- http://localhost:4200/details/info.id -->
+<!-- http://localhost:4200/details/762504 -->
+<!-- http://localhost:4200/details/833097 -->

@@ -1,0 +1,13 @@
+<section class="home">
+
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of allMovies">
+      <ng-template carouselSlide [id]="slide.id">
+        <img  [src]="'https://image.tmdb.org/t/p/w500'+slide.poster_path" [alt]="slide.alt" [title]="slide.title">
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+
+</section>
